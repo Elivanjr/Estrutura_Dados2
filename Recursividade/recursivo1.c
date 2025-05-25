@@ -12,10 +12,12 @@ int potenciaXY(int base, int expoente){
 
 int main(){
 	
-    int base = 9, expoent = 2;
+    int base, expoent;
+    printf("Digite a base e o expoente respectivamente: \n");
+    scanf("%i %i", &base, &expoent);
     int resposta = potenciaXY(base, expoent);
     
-    printf("Potencia: %i", resposta);
+    printf("%i^%i = %i", base, expoent, resposta);
     return 0;
 }
 
