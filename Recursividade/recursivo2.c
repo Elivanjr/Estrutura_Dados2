@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #define TAMANHO_MAX 10
 
 int somaArray(int array[], int size){
@@ -12,6 +13,7 @@ int somaArray(int array[], int size){
 }
 
 void botaNoVetor(int array[], int size){
+	srand(time(NULL));
 	if(size == 0)
 		return;
 	botaNoVetor(array, size-1);
@@ -24,8 +26,7 @@ int main(){
 	botaNoVetor(vetor, TAMANHO_MAX);
 	
 	printf("SOMA: %i\n\n", somaArray(vetor, TAMANHO_MAX));
-	for(int i = 0; i < TAMANHO_MAX; i ++){
+	for(int i = 0; i < TAMANHO_MAX; i ++)
 		printf("[%i] ", vetor[i]);
-	}
 	return 0;
 }
